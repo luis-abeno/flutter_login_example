@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_login_example/constants/styles.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -20,29 +21,30 @@ class _LoginScreenState extends State<LoginScreen> {
               fit: BoxFit.cover,
             ),
           ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              SizedBox(
-                child: Image.asset(
-                  'assets/images/lt_morales.png',
-                  width: 100,
+          child: Container(
+            margin: kContentMargin,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                SizedBox(
+                  child: Image.asset(
+                    'assets/images/lt_morales.png',
+                    width: 100,
+                  ),
                 ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(35, 10, 35, 10),
+                Container(
+                  width: double.infinity,
+                  margin: EdgeInsets.only(top: kMarginTopXS),
                   child: TextFormField(
                     controller: _userNameController,
-                    style: TextStyle(fontSize: 22, color: Color(0xFF4A4A4A)),
+                    style: kInputText,
                     decoration: InputDecoration(
                       prefixIcon: Icon(
                         Icons.people,
                         color: Color(0xFF4A4A4A),
                       ),
                       hintText: 'Username',
-                      hintStyle: TextStyle(color: Color(0xFF8F8F8F)),
+                      hintStyle: kInputPlaceholder,
                       fillColor: Colors.white,
                       filled: true,
                     ),
@@ -55,14 +57,12 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                   ),
                 ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(35, 10, 35, 10),
+                Container(
+                  width: double.infinity,
+                  margin: EdgeInsets.only(top: kMarginTopXS),
                   child: TextFormField(
                     controller: _passwordController,
-                    style: TextStyle(fontSize: 22, color: Color(0xFF4A4A4A)),
+                    style: kInputText,
                     obscureText: true,
                     decoration: InputDecoration(
                       prefixIcon: Icon(
@@ -70,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         color: Color(0xFF4A4A4A),
                       ),
                       hintText: 'Password',
-                      hintStyle: TextStyle(color: Color(0xFF8F8F8F)),
+                      hintStyle: kInputPlaceholder,
                       fillColor: Colors.white,
                       filled: true,
                     ),
@@ -85,33 +85,31 @@ class _LoginScreenState extends State<LoginScreen> {
                     },
                   ),
                 ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(35, 10, 35, 10),
+                Container(
+                  width: double.infinity,
+                  margin: EdgeInsets.only(top: kMarginTopXS),
                   child: RaisedButton(
-                    color: Color(0xFF1B99E2),
+                    color: kButtonPrimaryColor,
                     child: Text(
                       'Sign in',
-                      style: TextStyle(color: Colors.white),
+                      style: kTextColor,
                     ),
                     onPressed: () async {
-                      /// Do auth
+                      /// Do auth, make a request to an api
                     },
                   ),
                 ),
-              ),
-              SizedBox(
-                width: double.infinity,
-                child: Padding(
-                  padding: EdgeInsets.fromLTRB(35, 10, 35, 10),
-                  child: Text('Forgot your password?',
-                      textAlign: TextAlign.right,
-                      style: TextStyle(color: Colors.white)),
+                Container(
+                  width: double.infinity,
+                  margin: EdgeInsets.only(top: kMarginTopXS),
+                  child: Text(
+                    'Forgot your password?',
+                    textAlign: TextAlign.right,
+                    style: kTextColor,
+                  ),
                 ),
-              )
-            ],
+              ],
+            ),
           ),
         ),
       ),
