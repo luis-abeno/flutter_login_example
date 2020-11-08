@@ -91,7 +91,11 @@ class _LoginScreenState extends State<LoginScreen> {
                 child: Padding(
                   padding: EdgeInsets.fromLTRB(35, 10, 35, 10),
                   child: RaisedButton(
-                    child: Text('Sign in'),
+                    color: Color(0xFF1B99E2),
+                    child: Text(
+                      'Sign in',
+                      style: TextStyle(color: Colors.white),
+                    ),
                     onPressed: () async {
                       /// Do auth
                     },
