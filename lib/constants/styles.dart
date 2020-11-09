@@ -3,11 +3,11 @@ import 'dart:ffi';
 import 'package:flutter/material.dart';
 
 /// Default margins
-const double kMarginTopXLG = 150.0;
-const double kMarginTopLG = 80.0;
-const double kMarginTopMD = 40.0;
-const double kMarginTopSM = 20.0;
-const double kMarginTopXS = 10.0;
+const double kMarginXLG = 150.0;
+const double kMarginLG = 80.0;
+const double kMarginMD = 40.0;
+const double kMarginSM = 20.0;
+const double kMarginXS = 10.0;
 
 /// Page content Margin
 const EdgeInsets kContentMargin = EdgeInsets.fromLTRB(35, 0, 35, 0);

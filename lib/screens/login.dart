@@ -39,8 +39,12 @@ class _LoginScreenState extends State<LoginScreen> {
                         ),
                       ),
                       Container(
+                        margin: EdgeInsets.only(bottom: kMarginXS),
+                        child: Text('My Awesome Logo', style: kTextColor),
+                      ),
+                      Container(
                         width: double.infinity,
-                        margin: EdgeInsets.only(top: kMarginTopXS),
+                        margin: EdgeInsets.only(top: kMarginXS),
                         child: TextFormField(
                           controller: _userNameController,
                           style: kInputText,
@@ -66,7 +70,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       Container(
                         width: double.infinity,
-                        margin: EdgeInsets.only(top: kMarginTopXS),
+                        margin: EdgeInsets.only(top: kMarginXS),
                         child: TextFormField(
                           controller: _passwordController,
                           style: kInputText,
@@ -95,11 +99,11 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       Container(
                         width: double.infinity,
-                        margin: EdgeInsets.only(top: kMarginTopXS),
+                        margin: EdgeInsets.only(top: kMarginXS),
                         child: RaisedButton(
                           color: kButtonPrimaryColor,
                           child: Text(
-                            'Sign in',
+                            'Log in',
                             style: kTextColor,
                           ),
                           onPressed: () async {
@@ -117,7 +121,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       ),
                       Container(
                         width: double.infinity,
-                        margin: EdgeInsets.only(top: kMarginTopXS),
+                        margin: EdgeInsets.only(top: kMarginXS),
                         child: InkWell(
                           onTap: () => {
                             Navigator.push(
