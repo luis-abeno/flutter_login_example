@@ -5,3 +5,6 @@ You can use this as example, i've tried to use a lot of concepts like using an i
 # How to contribute
 If you found some thing that can be improved, just make a PR =)
 *Or for some bugs you found =X
+
+# How to use
+Just make sure your Flutter environment is running properly, then clone and be happy.
